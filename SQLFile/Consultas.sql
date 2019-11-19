@@ -29,4 +29,5 @@ where fecha between '2018-10-01' and '2018-10-31' and barrio='Barracas';
  select sucursales.CodigoDeSucursal,Barrio,direccion, ventas.MontoTotal from sucursales
  inner join ventas on ventas.CodigoDeSucursal=sucursales.CodigoDeSucursal
  where fecha between '2018-11-01' and '2018-11-15'
+ GROUP BY Barrio;
  order by MontoTotal asc;
