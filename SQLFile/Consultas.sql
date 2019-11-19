@@ -22,7 +22,7 @@ select NumeroDeTicket, ventas.CodigoDeSucursal ,Fecha,MontoTotal,MedioDePago, su
 inner join (sucursales) on ventas.CodigoDeSucursal = sucursales.CodigoDeSucursal
 where fecha between '2018-10-01' and '2018-10-31' and barrio='Barracas';
 /*6)*/
- SELECT sucursales.CodigoDeSucursal, Barrio, ventas.MontoTotal FROM sucursales
+ SELECT COUNT(*) as 'CantidadDeSucursales' FROM sucursales
  INNER JOIN ventas ON ventas.CodigoDeSucursal = sucursales.CodigoDeSucursal
  where Fecha between '2018-09-01' and '2018-09-30' and ventas.MontoTotal> 850;
  /*7)*/
